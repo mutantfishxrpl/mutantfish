@@ -67,17 +67,18 @@
 
     /* --- Responsive Backgrounds --- */
 
-    /* Mobile Portrait (tinggi) */
+    /* Mobile Portrait */
     @media (max-width: 600px) and (orientation: portrait) {
       body {
-        background: url("background-mobile.png") no-repeat center top;
-        background-size: cover;     /* biar full tanpa gap */
+        background: url("background-mobile.png") no-repeat top center;
+        background-size: contain;        /* biar tidak terlalu besar */
+        background-color: #001f33;       /* isi ruang kosong warna laut */
         min-height: 100vh;
       }
 
       .social-icons {
         gap: 15px;
-        bottom: 12%;  /* naik sedikit di HP */
+        bottom: 12%;   /* naik sedikit */
       }
 
       .social-icons a img {
