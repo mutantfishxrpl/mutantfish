@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fix viewport biar pas di HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Mutant Fish</title>
   <style>
     * {
@@ -18,7 +19,7 @@
       justify-content: center;
       align-items: center;
       background: url("background.png") no-repeat center center;
-      background-size: cover;
+      background-size: cover; /* default desktop */
       overflow: hidden;
       position: relative;
       font-family: sans-serif;
@@ -27,19 +28,19 @@
     /* Container untuk social icons */
     .social-icons {
       position: absolute;
-      bottom: 8%;   /* lebih bawah */
+      bottom: 8%;
       display: flex;
       gap: 25px;
     }
 
     .social-icons a img {
-      width: 65px;   /* lebih besar */
+      width: 65px;
       height: 65px;
       transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     .social-icons a img:hover {
-      transform: scale(1.25); /* lebih dramatis */
+      transform: scale(1.25);
       filter: drop-shadow(0 0 15px #00f7ff);
     }
 
@@ -64,16 +65,21 @@
       }
     }
 
-    /* Responsive */
+    /* Responsive khusus HP */
     @media (max-width: 600px) {
+      body {
+        background-size: contain;   /* biar gambar pas, tidak zoom */
+        background-color: #000;     /* isi kosong dengan hitam */
+      }
+
       .social-icons {
         gap: 15px;
-        bottom: 5%;   /* geser lebih ke bawah di layar kecil */
+        bottom: 5%;  /* lebih bawah */
       }
 
       .social-icons a img {
-        width: 50px;   /* tetap besar di HP */
-        height: 50px;
+        width: 55px;
+        height: 55px;
       }
     }
   </style>
@@ -111,7 +117,3 @@
 
 </body>
 </html>
-
-
-
-
