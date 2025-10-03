@@ -13,13 +13,13 @@
     }
 
     body {
-      min-height: 100vh;
+      height: 100vh;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       background: url("background-desktop.png") no-repeat center center;
-      background-size: cover;
+      background-size: cover;   /* isi full layar */
       overflow: hidden;
       position: relative;
       font-family: sans-serif;
@@ -66,19 +66,15 @@
     }
 
     /* --- Responsive Backgrounds --- */
-
-    /* Mobile Portrait */
     @media (max-width: 600px) and (orientation: portrait) {
       body {
-        background: url("background-mobile.png") no-repeat top center;
-        background-size: contain;        /* biar tidak terlalu besar */
-        background-color: #001f33;       /* isi ruang kosong warna laut */
-        min-height: 100vh;
+        background: url("background-mobile.png") no-repeat center center;
+        background-size: cover;   /* full tanpa hitam */
       }
 
       .social-icons {
         gap: 15px;
-        bottom: 12%;   /* naik sedikit */
+        bottom: 10%;  /* dinaikkan sedikit biar gak terlalu mepet */
       }
 
       .social-icons a img {
@@ -87,17 +83,15 @@
       }
     }
 
-    /* Mobile Landscape */
     @media (max-width: 900px) and (orientation: landscape) {
       body {
         background: url("background-desktop.png") no-repeat center center;
         background-size: cover;
-        min-height: 100vh;
       }
 
       .social-icons {
         gap: 20px;
-        bottom: 8%;
+        bottom: 6%;
       }
 
       .social-icons a img {
