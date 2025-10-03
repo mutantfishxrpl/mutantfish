@@ -27,20 +27,20 @@
     /* Container untuk social icons */
     .social-icons {
       position: absolute;
-      bottom: 15%;
+      bottom: 8%;   /* lebih bawah */
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
 
     .social-icons a img {
-      width: 45px;
-      height: 45px;
+      width: 65px;   /* lebih besar */
+      height: 65px;
       transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     .social-icons a img:hover {
-      transform: scale(1.2);
-      filter: drop-shadow(0 0 10px #00f7ff);
+      transform: scale(1.25); /* lebih dramatis */
+      filter: drop-shadow(0 0 15px #00f7ff);
     }
 
     /* Efek gelembung */
@@ -67,12 +67,13 @@
     /* Responsive */
     @media (max-width: 600px) {
       .social-icons {
-        gap: 12px;
+        gap: 15px;
+        bottom: 5%;   /* geser lebih ke bawah di layar kecil */
       }
 
       .social-icons a img {
-        width: 35px;
-        height: 35px;
+        width: 50px;   /* tetap besar di HP */
+        height: 50px;
       }
     }
   </style>
@@ -81,10 +82,10 @@
 
   <!-- Tempat ikon sosial -->
   <div class="social-icons">
-    <a href="#"><img src="icons/x.png" alt="X"></a>
-    <a href="#"><img src="icons/telegram.png" alt="Telegram"></a>
-    <a href="#"><img src="icons/dexscreener.png" alt="Dexscreener"></a>
-    <a href="#"><img src="icons/firstledger.png" alt="FirstLedger"></a>
+    <a href="#"><img src="icons/x.jpeg" alt="X"></a>
+    <a href="#"><img src="icons/telegram.jpeg" alt="Telegram"></a>
+    <a href="#"><img src="icons/dexscreener.jpeg" alt="Dexscreener"></a>
+    <a href="#"><img src="icons/firstledger.jpg" alt="FirstLedger"></a>
     <a href="#"><img src="icons/xrpcafe.png" alt="XRPCafe"></a>
   </div>
 
